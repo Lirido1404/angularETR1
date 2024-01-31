@@ -1,0 +1,7 @@
+.myForm input.ng-invalid.ng-dirty{
+    background-color: brown;
+}
+
+.myForm input.ng-valid.ng-dirty{
+    background-color: green;
+}

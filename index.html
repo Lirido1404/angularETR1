@@ -5,54 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
     <script src="/CommentCtrl.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div>
-      <label for="">Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here" />
-      <hr />
-      <h1>hello {{yourName}}</h1>
-    </div>
-    <hr />
-    <div>
-      <input type="text" ng-model="Nbr1" />
-      <input type="text" ng-model="Nbr2" />
-      <p>{{"Somme : " + (Nbr1*1 + Nbr2*1) }}</p>
-    </div>
-
-    <hr />
-    <input type="text" ng-model="query">
-    <select name="" id="" ng-model="order">
-        <option value="username">Organiser par nom</option>
-        <option value="content">Organiser par contenu</option>
-    </select>
-    <div ng-controller="CommentsCtrl">
-      <div ng-repeat="comment in comments | filter:{content:query} | orderBy:order">
-        <p><strong>{{comment.username}}</strong><br>
-        {{comment.content}}</p>
-        
-      </div>
-    </div>
-
-
-    <hr>
-
-    <input type="text" ng-model="queryy">
-    <select name="" id="" ng-model="order">
-        <option value="username">Par nom</option>
-        <option value="content">Par content</option>
-    </select>
-    <div ng-controller="usersCtrl">
-        <li ng-repeat="user in users | orderBy:order | filter:queryy"> {{user.username}} </li>
-    </div>
-
-
-
-
-
-
-
-    
+    <div ng-view></div>
   </body>
 </html>
